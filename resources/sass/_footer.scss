@@ -1,0 +1,52 @@
+footer {
+    height: 100px;
+    margin-top: 5rem;
+    background: $gradient;
+
+    .footer__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        @media all and (min-width: map-get($brakepoints, xs)) and (max-width: map-get($brakepoints, sm)){
+            & {
+               flex-direction: column;
+            }
+        }
+
+        .footer__copyright {
+            font-size: 1.8rem;
+            color:black;
+            text-align: center;
+
+            @media all and (min-width: map-get($brakepoints, xs)) and (max-width: map-get($brakepoints, sm)){
+                & {
+                    margin-top: -2rem;
+                }
+            }   
+        }
+
+        .social__icons {
+            display: flex;
+            font-size: 3rem;
+
+            @media all and (min-width: map-get($brakepoints, xs)) and (max-width: map-get($brakepoints, sm)){
+                & {
+                    padding: 4rem 0 4rem 0;
+                }
+            }   
+
+            .social__icons--gihub {
+                margin-right: 2rem;
+
+                .bi-github {
+                    color: black;
+                }
+            }
+
+            .bi-linkedin {
+                color: #4C6EF5;
+            }
+        }
+    }
+}

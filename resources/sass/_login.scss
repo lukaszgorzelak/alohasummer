@@ -1,0 +1,58 @@
+.login {
+    text-align: center;
+    background: linear-gradient(90deg, hsla(18, 76%, 85%, 1) 0%, hsla(203, 69%, 84%, 1) 100%);
+    margin-top: 11rem;
+    max-width: 50rem;
+    border-radius: 1rem;
+    margin-bottom:11rem;
+    max-height: 52rem;
+
+    .login__title {
+        color: $heading-color;
+        text-align: center;
+        font-size: 4rem;
+        font-family: 'Volkhov';
+        padding-top: 3rem;
+    }
+
+    .login__form {
+
+        .login__form__card {
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+        }
+
+        .login__form__card--remember-me {
+            @include grid(40px 1fr);
+            align-items: center;
+            margin-top: 0;
+
+            .input__remember-me {
+                width: 2rem;
+                margin-top: -0.4rem;
+            }
+        }
+
+        .login__form__card--forgot-password {
+
+            a {
+                color: $heading-color;
+                font-size: 1.2rem;
+                font-weight: 500;
+                text-decoration: none;
+            }
+        }
+
+        input {
+            border: 2px solid $heading-color;
+        }
+
+        .form__button--login {
+             background: linear-gradient(90deg, hsla(18, 76%, 85%, 1) 0%, hsla(203, 69%, 84%, 1) 100%);
+             color: $heading-color;
+             border: 2px solid $heading-color;
+             margin-bottom: 0;
+             margin-top: -1rem;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+@mixin grid($columns) {
+    display: grid;
+    grid-template-columns: $columns;
+}
+
+@mixin title {
+    color: $heading-color;
+    text-align: center;
+    font-size: 5rem;
+    font-family: 'Volkhov';
+    margin-top: 10rem;
+}

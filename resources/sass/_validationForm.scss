@@ -1,0 +1,29 @@
+.invalid{
+    border:1px solid red !important;
+    outline: none;
+    box-shadow: 0 0 2px red;
+  }
+  
+  .valid{
+    border: 1px solid #4dcc23 !important;
+    outline: none;
+    box-shadow: 0 0 2px #4dcc23;
+  }
+
+  .form__message {
+    text-align: center;
+  
+    .form-error-title {
+      color: red;
+      font-size: 2rem;
+    }
+  
+    .form-error-list {
+      color: red;
+      font-size: 1.5rem;
+  
+      li {
+        margin-top: 1rem;
+      }
+    }
+  }

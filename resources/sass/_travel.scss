@@ -1,0 +1,96 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media all and (max-width: map-get($brakepoints, lg)){
+        & {
+            order: 1;
+            margin: 0 auto;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    .content__title {
+        color: #DF6951;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+    }
+
+    .content__text {
+        font-weight: 700;
+        font-size: 5rem;
+        color: #181E4B;
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
+        position: relative;
+        font-family: 'Volkhov';
+
+        &:after {
+            content: "";
+            right: 0.9375rem;
+            top: 4.5rem;
+            width: 21rem;
+            height: 0.8125rem;
+            background-image: url("/images/shape.svg");
+            background-size: cover;
+            z-index: -1;
+            position: absolute;
+            display: block;
+           
+        }
+       
+    }
+
+    .content__describe {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        width: 50rem;
+        color: #5E6282;
+
+         @media all and (min-width: map-get($brakepoints, xs)) and (max-width: map-get($brakepoints, sm)){
+            & {
+              width: 28rem;
+            }
+        }
+    }
+}
+
+.content__background{
+    background-image: url("/images/women.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: calc(100vh - 10rem);
+
+    @media all and (min-width: map-get($brakepoints, xs)) and (max-width: map-get($brakepoints, sm)){
+        & {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+            height: calc(50vh - 10rem);
+        }
+    }
+
+    @media all and (min-width: map-get($brakepoints, sm)) and (max-width: map-get($brakepoints, lg)){
+        & {
+            height: calc(72vh - 10rem);
+            margin-top: 10rem;
+        }
+    }
+}
+
+.travel__wrapper {
+    @include grid(1fr 1fr)
+}
+
+ .background{
+    background-image: url("/images/shape1.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:calc(100vh - 10rem);
+}
+

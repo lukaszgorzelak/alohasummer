@@ -1,0 +1,49 @@
+.opinions {
+
+    .opinions__title {
+       @include title;
+    }
+
+    .opinions__wrapper {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .opinions__card {
+        display: flex;
+        flex-direction: column;
+        width: 26rem;
+        height: 35rem;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow:$shadow-10;
+        border-radius: 1rem;
+        margin-top: 3rem;
+        margin-right: 1rem;
+
+        img {
+            border-radius: 50%;
+            max-width: 100%;
+            width: 50%;
+        }
+
+        .opinions__card_name {
+            color: rgba(0, 0, 0, 0.38);
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        .opinions__card__opinion {
+            color: rgba(0, 0, 0, 0.54);
+            font-weight: 500;
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .opinions__card__aloha-summer {
+            font-weight: 600;
+        }
+    }
+}

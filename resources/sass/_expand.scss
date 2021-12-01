@@ -1,0 +1,53 @@
+    .wrapper {
+        position: relative;
+    }
+    .expand {
+        display: inline-block;
+        position: absolute;
+        bottom: -8%;
+        left: 0;
+        width: 100%;
+        height: 53rem;
+        text-align: center;
+        background: linear-gradient(transparent 20%, #baddf2 40%, white 102%);
+        padding-top: 14rem;
+        font-size: 2rem;
+        color: $heading-color;
+
+        .expand__paragraph {
+            cursor: pointer;
+            padding: 7rem;
+
+            i {
+                font-size: 3.5rem;
+            }
+        }
+    }
+
+    .collapse {
+        position: absolute;
+        bottom:-1.2%;
+        background:unset;
+        height: 2rem;
+        padding-top: 0;
+        top: unset;
+        text-align: center;
+        width: 100%;
+        font-size: 2rem;
+        color: $heading-color;
+        cursor: pointer;
+        display: none;
+
+        @media all and (min-width: map-get($brakepoints, xs)) and (max-width: 1304px){
+            & {
+                bottom:-0.45%;
+            }
+        }
+
+        .collapse__paragraph {
+
+            i {
+                font-size: 3.5rem;
+            }
+        }
+    }

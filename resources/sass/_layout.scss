@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-fluid,
+.container {
+    margin-right: auto;
+    margin-left: auto; 
+    width: 100%;
+}
+
+.container { 
+    max-width: 130rem; // 1200px
+    padding-right: 1rem;
+    padding-left: 1rem;
+    // display: flex; 
+} 
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
+.mt {
+    margin-top: 5rem;
+}
+
+.mt-10 {
+    margin-top: 10rem;
+}
+
+.mb-10 {
+    margin-bottom: 10rem;
+}
+
+.mb-4 {
+    margin-bottom: 4rem;
+}
+
+.title {
+    @include title;
+}
+
+.road__title {
+    margin-top: 15rem;
+}
+
+.relative {
+    position: relative;
+}
+
+.hidden {
+   display: none !important;
+}
+
+.block {
+    display: block !important;
+ }
+
+@media all and (min-width: map-get($brakepoints, xs)) and (max-width:385px){
+    .road__title {
+       margin-top: 25rem
+    }
+}
+
+@media all and (orientation: landscape){
+    .road__title {
+       margin-top: 25rem
+    }
+}
+
+@media all and (min-width: map-get($brakepoints, lg)){
+    .road__title {
+       margin-top: 0;
+    }
+}
+
+.wrapper {
+    @include grid(repeat(auto-fill, minmax(295px, 390px)));
+    grid-gap: 5rem;
+    justify-content: center;
+}
+
+.mask {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: #111;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    .logo__site {
+      width: 15rem;
+      height: 15rem;
+    }
+}
+
+.alert-danger {
+    color: crimson;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.show {
+    display: block !important;
+    height: 121px !important;
+    bottom: -78% !important;
+    box-shadow: 0 0.25rem 1rem rgb(0 0 0 / 25%);
+}
+
+.animationSlide {
+    animation: Slide 5s;
+    animation-timing-function: cubic-bezier(.28,.9,.4,.88);
+}
+
+.not-allowed {
+    pointer-events: none;
+    background-color: $success;
+    opacity: 0.4;
+}
+
+@media all and (max-width: map-get($brakepoints, lg)){
+    .travel__wrapper {
+       grid-template-columns: 1fr;
+    }
+}
+
+[class*="col-"] {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+    position: relative;
+}
+
+@for $i from 1 to 13 {
+
+    .col-#{$i} {
+        width: $i / 12 * 100%;
+        max-width: $i / 12 * 100%;
+    }
+
+}
+
+@media (min-width: 30rem) { // 480px
+
+    @for $i from 1 to 13 {
+
+        .col-sm-#{$i} {
+            width: $i / 12 * 100%;
+            max-width: $i / 12 * 100%;
+        }
+
+    }
+
+}
+
+@media (min-width: 48rem) { // 768px
+
+    @for $i from 1 to 13 {
+
+        .col-md-#{$i} {
+            width: $i / 12 * 100%;
+            max-width: $i / 12 * 100%;
+        }
+
+    }
+
+}
+
+@media (min-width: 62rem) { // 992px
+
+    @for $i from 1 to 13 {
+
+        .col-lg-#{$i} {
+            width: $i / 12 * 100%;
+            max-width: $i / 12 * 100%;
+        }
+
+    }
+
+}
+
+@media (min-width: 75rem) { // 1200px
+
+    @for $i from 1 to 13 {
+
+        .col-xl-#{$i} {
+            width: $i / 12 * 100%;
+            max-width: $i / 12 * 100%;
+        }
+
+    }
+
+}

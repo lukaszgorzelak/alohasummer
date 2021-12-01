@@ -1,0 +1,82 @@
+.card {
+    border-radius: 0.5rem;
+    background: linear-gradient( white, hsla(203, 69%, 84%, 1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px 30px;
+
+    .card__heading {
+        color: crimson;
+        font-weight: 500;
+        font-size: 2rem;
+        text-align: center;
+
+        &:first-of-type {
+            margin-top: 3rem;
+        }
+    }
+
+    .card__content {
+        padding: 3rem 0;
+        color: $heading-color;
+        font-size: 2rem;
+        font-weight: 500;
+        word-break: break-word;
+    }
+
+    &:hover {
+        box-shadow: $shadow-20;
+    }
+
+    .card__action {
+        display: flex;
+        justify-content: space-around;
+        font-size: 3rem;
+
+        .card__action--close {
+
+            a{
+                color: crimson;
+                padding: 0.5rem 1rem;
+            }
+         
+            & > a:hover {
+                cursor: pointer;
+                border: 2px solid crimson;
+                border-radius: 0.5rem;
+            }
+        }
+
+        .card__action--edit {
+            color: #f5af00;
+            padding: 0.5rem 1rem;
+
+            a{
+                color: #f5af00;
+                padding: 0.5rem 1rem;
+            }
+
+            & > a:hover {
+                cursor: pointer;
+                border: 2px solid #f5af00;
+                border-radius: 0.5rem;
+            }
+        }
+    }
+}
+
+.card__add {
+    display: flex;
+    justify-content: center;
+    .card__add-btn {
+        box-shadow: $shadow-10;
+        color: $heading-color;
+        font-size: 3rem;
+        border: none;
+        background-color: white;
+        padding: 1rem 2rem;
+        border-radius: 0.8rem;
+        cursor: pointer;
+    }
+}

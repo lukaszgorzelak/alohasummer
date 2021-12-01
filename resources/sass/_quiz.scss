@@ -1,0 +1,109 @@
+.quiz {
+
+    .quiz__title {
+        @include title;
+     }
+
+    .quiz__wrapper {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        height: 50rem;
+        max-width: 40rem;
+        box-shadow: $shadow-10;
+        border-radius: 1rem;
+        margin: 0 auto;
+
+        .quiz__header {
+            color: #00b4d8;
+            font-size: 2.6rem;
+            font-weight: 500;
+            width: 30rem;
+            text-align: center;
+            background: -webkit-linear-gradient(100deg, $heading-color 30%, hsla(197, 100%, 64%, 1) 65%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .quiz__random__phrase {
+            color: $heading-color;
+            font-size: 2rem;
+            font-weight: 500;
+            width: 30rem;
+            text-align: center;
+            display: none;
+            justify-content: center;
+
+            @media all and (min-width: map-get($brakepoints, xs)) and (max-width: map-get($brakepoints, sm)){
+                & {
+                    padding: 2rem;
+                }
+            }
+        }
+
+        .quiz__check__answear {
+            display: none;
+
+            .correct {
+                font-size: 2.5rem;
+                color: green;
+                display: flex;
+                width: 155px;
+                justify-content: space-evenly;
+            }
+
+            .incorrect {
+                font-size: 2.5rem;
+                color: red;
+                display: flex;
+                width: 155px;
+                justify-content: space-evenly;
+            }
+        }
+
+        .quiz__translate {
+
+            input {
+                height: 6rem;
+                width: 30rem;
+                border: 2px solid lightgray;
+                padding-left: 1rem;
+        
+                @media all and (min-width: map-get($brakepoints, xs)) and (max-width: map-get($brakepoints, sm)){
+                    & {
+                        width: 25rem;
+                    }
+                }
+            }
+        }
+        .quiz__buttons {
+
+            button {
+                color: $white;
+                font-size: 1.5rem;
+                border: none;
+                padding: 1rem 2rem;
+                border-radius: 0.8rem;
+                cursor: pointer;
+            }
+
+            .quiz__btn-draw {
+                background-color: $heading-color;
+                margin-right: 2rem;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+
+            .quiz__btn-check {
+                background-color: $success;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.confirm {
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    transform: translate(-50%,-40%);
+    z-index: 9;
+   
+    .confirm__title {
+        color: #45a197;
+        text-align: center;
+        font-size: 4rem;
+        font-family: 'Volkhov';
+        padding-top: 3rem;
+        margin-top: -5rem;
+        margin-bottom: 2rem;
+    }
+
+    .confirm__body {
+        background-color: #f7fdfc;
+        border:1px solid #a3ebe4;
+        text-align: center;
+        font-size: 2rem;
+        padding: 5rem;
+        color: #45a197;
+        border-radius: 1rem;
+    }
+
+    @keyframes Slide{
+        0% {top:-40%}
+
+        15% {top:40%}
+
+        90% {top: 40%}
+
+        100% {top: -40%}
+    }
+}
+

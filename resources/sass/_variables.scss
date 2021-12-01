@@ -1,0 +1,19 @@
+$black:#000;
+$white:#fff;
+$success:#008000;
+$heading-color:#181E4B;
+$gradient: linear-gradient( #FDF1DA, white);
+$shadow-10: 0 .25rem 1rem rgba(0, 0, 0, 0.25);
+$shadow-20: rgb(0 0 0 / 35%) 0px .5rem 1.5rem;
+// $shadow-primary: 0 .75rem 1.25rem rgba($gradient, 0.2);
+// $shadow-secondary: 0 .75rem 1.25rem rgba($gradient, 0.2);
+
+$brakepoints:(
+  xs:320px,
+  sm:580px,
+  md:768px,
+  lg:1000px,
+  xl:1200px,
+  xxl:1400px,
+  xxxl:1800px,
+)
