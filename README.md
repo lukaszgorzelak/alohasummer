@@ -2,14 +2,14 @@
     
 <p>1. Sklonuj repozytorium na swój dysk</p>
 <p>2. Otwórz w terminalu folder w którym zawarte są pliki projektu</p>
-<p>3. Zainstaluj composera(composer install)</p>
+<p>3. Zainstaluj composera(<b>composer install</b>)</p>
 <p>4. Skopiuj plik .env.example do .env
-    -Linux(cp .env.example .env)
-    -Windows(copy .env.example .env)
+    -Linux(<b>cp .env.example .env</b>)
+    -Windows(<b>copy .env.example .env</b>)
 </p>
-<p>W pliku .env zmień nazwę bazy danych na aloha_summer(DB_DATABASE=aloha_summer)</p>
-<p>Stwórz klucz aplikacji(php artisan key:generate)</p>
-<p>Odpal server laravela(php artisan serve)</p>
+<p>5. W pliku .env zmień nazwę bazy danych na aloha_summer(<b>DB_DATABASE=aloha_summer</b>)</p>
+<p>6. Stwórz klucz aplikacji(<b>php artisan key:generate</b>)</p>
+<p>7. Odpal server laravela(<b>php artisan serve</b>)</p>
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
