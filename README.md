@@ -3,8 +3,8 @@
 <p>1. Sklonuj repozytorium na swój dysk</p>
 <p>2. Otwórz w terminalu folder w którym zawarte są pliki projektu</p>
 <p>3. Zainstaluj composera(<b>composer install</b>)</p>
-<p>4. Skopiuj plik .env.example do .env
-    -Linux(<b>cp .env.example .env</b>)
+<p>4. Skopiuj plik .env.example do .env</br>
+    -Linux(<b>cp .env.example .env</b>)</br>
     -Windows(<b>copy .env.example .env</b>)
 </p>
 <p>5. W pliku .env zmień nazwę bazy danych na aloha_summer(<b>DB_DATABASE=aloha_summer</b>)</p>
