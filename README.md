@@ -1,6 +1,6 @@
 <h1>Uruchomienie projektu</h1>
     
-<p>1. Sklonuj repozytorium na swój dysk</p>
+<p>1. Sklonuj repozytorium na swój dysk(<b>git clone https://github.com/lukaszgorzelak/alohasummer.git</b>)</p>
 <p>2. Otwórz w terminalu folder w którym zawarte są pliki projektu</p>
 <p>3. Zainstaluj composera(<b>composer install</b>)</p>
 <p>4. Skopiuj plik .env.example do .env</br>

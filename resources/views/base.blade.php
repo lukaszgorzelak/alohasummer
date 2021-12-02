@@ -157,7 +157,7 @@
                         </a>
                     </div>
                     <div class="social__icons--linkedin">
-                        <a href="https://linkedin.com/in/łukasz-gorzelak-545074149">
+                        <a href="https://www.linkedin.com/in/%C5%82ukasz-gorzelak-545074149/">
                             <i class="bi bi-linkedin"></i>
                         </a>
                     </div>
