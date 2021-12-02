@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', 'StartController@index');
+Route::get('/road', 'StartController@index')->name('road');
 
 Route::middleware(['auth', 'verified'])->group(function(){
     Route::get('/home', 'HomeController@index')->name('home');

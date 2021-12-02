@@ -11,6 +11,7 @@ import { addAnimation } from"../js/_animationSlide";
 import { drawRandomPhrase, checkinputValue } from"../js/_quiz";
 import { sliceCard,expandCard,collapseCard } from"../js/_expand";
 import { validate } from"../js/_validationForm";
+import { scrollToNewCard } from"../js/_newCard";
 
 document.addEventListener('DOMContentLoaded', function() {
     const cardsRoad = [...document.querySelectorAll('.card--road')];
@@ -42,5 +43,10 @@ document.addEventListener('DOMContentLoaded', function() {
     sliceCard(cardsAirport),
     expandCard(),
     collapseCard(),
-    validate()
+    validate(),
+    scrollToNewCard('/road','.card--road'),
+    scrollToNewCard('/ticket','.card--ticket'),
+    scrollToNewCard('/rent','.card--rent'),
+    scrollToNewCard('/time','.card--time'),
+    scrollToNewCard('/airport','.card--airport')
 });

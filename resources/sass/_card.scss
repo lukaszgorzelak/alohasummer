@@ -6,6 +6,20 @@
     justify-content: center;
     padding: 25px 30px;
 
+    .new {
+        background-color: #008000;
+        color: white;
+        padding: 1rem;
+        opacity: 0.8;
+        border-radius: 0.5rem;
+        width: 5rem;
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        letter-spacing: 0.1rem;
+        font-weight: 600;
+      }
+
     .card__heading {
         color: crimson;
         font-weight: 500;

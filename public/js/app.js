@@ -246,6 +246,44 @@ var handleClick = function handleClick() {
 
 /***/ }),
 
+/***/ "./resources/js/_newCard.js":
+/*!**********************************!*\
+  !*** ./resources/js/_newCard.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "scrollToNewCard": () => (/* binding */ scrollToNewCard)
+/* harmony export */ });
+var scrollToNewCard = function scrollToNewCard(pathname, card) {
+  if (location.pathname == pathname) {
+    var last = $(card).last(); // last.addClass("last")
+
+    var p = last.find("p.card__heading").first();
+    p.before("<p class=\"new\">NEW</p>"); // $('.last').removeClass("hidden");
+
+    var card__heading = $('.new');
+    setTimeout(function () {
+      card__heading.slideUp();
+    }, 4000);
+    var offset = last.offset(); // const expand = last.closest('section').find('.expand').addClass('hidden');
+    // const collapse = last.closest('section').find('.collapse').addClass('block');
+
+    $('html, body').animate({
+      scrollTop: offset.top,
+      scrollLeft: offset.left,
+      behavior: "smooth"
+    }); // console.log(expand)
+  }
+
+  ;
+};
+
+
+
+/***/ }),
+
 /***/ "./resources/js/_quiz.js":
 /*!*******************************!*\
   !*** ./resources/js/_quiz.js ***!
@@ -475,6 +513,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_quiz__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../js/_quiz */ "./resources/js/_quiz.js");
 /* harmony import */ var _js_expand__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../js/_expand */ "./resources/js/_expand.js");
 /* harmony import */ var _js_validationForm__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../js/_validationForm */ "./resources/js/_validationForm.js");
+/* harmony import */ var _js_newCard__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../js/_newCard */ "./resources/js/_newCard.js");
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -489,6 +528,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 
  // import { validation } from"../js/_form";
+
 
 
 
@@ -516,7 +556,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
   (0,_js_hamburgerMenu_js__WEBPACK_IMPORTED_MODULE_0__.handleClick)(), (0,_js_scroll_js__WEBPACK_IMPORTED_MODULE_1__.changeScroll)(), (0,_js_scroll_js__WEBPACK_IMPORTED_MODULE_1__.upper)(), // validation(),
-  (0,_addPhraseModal_js__WEBPACK_IMPORTED_MODULE_2__.addPhraseModal)(), (0,_js_closeModal_js__WEBPACK_IMPORTED_MODULE_4__.closeModal)(), (0,_js_editModal_js__WEBPACK_IMPORTED_MODULE_3__.editModal)(), (0,_js_removeRoadPhraseModal_js__WEBPACK_IMPORTED_MODULE_5__.removeRoadPhrase)(), (0,_js_dropdown_js__WEBPACK_IMPORTED_MODULE_6__.toogleUl)(), (0,_js_animationSlide__WEBPACK_IMPORTED_MODULE_7__.addAnimation)(), (0,_js_quiz__WEBPACK_IMPORTED_MODULE_8__.drawRandomPhrase)(), (0,_js_quiz__WEBPACK_IMPORTED_MODULE_8__.checkinputValue)(), (0,_js_expand__WEBPACK_IMPORTED_MODULE_9__.sliceCard)(cardsRoad), (0,_js_expand__WEBPACK_IMPORTED_MODULE_9__.sliceCard)(cardsTicket), (0,_js_expand__WEBPACK_IMPORTED_MODULE_9__.sliceCard)(cardsRent), (0,_js_expand__WEBPACK_IMPORTED_MODULE_9__.sliceCard)(cardsTime), (0,_js_expand__WEBPACK_IMPORTED_MODULE_9__.sliceCard)(cardsAirport), (0,_js_expand__WEBPACK_IMPORTED_MODULE_9__.expandCard)(), (0,_js_expand__WEBPACK_IMPORTED_MODULE_9__.collapseCard)(), (0,_js_validationForm__WEBPACK_IMPORTED_MODULE_10__.validate)();
+  (0,_addPhraseModal_js__WEBPACK_IMPORTED_MODULE_2__.addPhraseModal)(), (0,_js_closeModal_js__WEBPACK_IMPORTED_MODULE_4__.closeModal)(), (0,_js_editModal_js__WEBPACK_IMPORTED_MODULE_3__.editModal)(), (0,_js_removeRoadPhraseModal_js__WEBPACK_IMPORTED_MODULE_5__.removeRoadPhrase)(), (0,_js_dropdown_js__WEBPACK_IMPORTED_MODULE_6__.toogleUl)(), (0,_js_animationSlide__WEBPACK_IMPORTED_MODULE_7__.addAnimation)(), (0,_js_quiz__WEBPACK_IMPORTED_MODULE_8__.drawRandomPhrase)(), (0,_js_quiz__WEBPACK_IMPORTED_MODULE_8__.checkinputValue)(), (0,_js_expand__WEBPACK_IMPORTED_MODULE_9__.sliceCard)(cardsRoad), (0,_js_expand__WEBPACK_IMPORTED_MODULE_9__.sliceCard)(cardsTicket), (0,_js_expand__WEBPACK_IMPORTED_MODULE_9__.sliceCard)(cardsRent), (0,_js_expand__WEBPACK_IMPORTED_MODULE_9__.sliceCard)(cardsTime), (0,_js_expand__WEBPACK_IMPORTED_MODULE_9__.sliceCard)(cardsAirport), (0,_js_expand__WEBPACK_IMPORTED_MODULE_9__.expandCard)(), (0,_js_expand__WEBPACK_IMPORTED_MODULE_9__.collapseCard)(), (0,_js_validationForm__WEBPACK_IMPORTED_MODULE_10__.validate)(), (0,_js_newCard__WEBPACK_IMPORTED_MODULE_11__.scrollToNewCard)('/road', '.card--road'), (0,_js_newCard__WEBPACK_IMPORTED_MODULE_11__.scrollToNewCard)('/ticket', '.card--ticket'), (0,_js_newCard__WEBPACK_IMPORTED_MODULE_11__.scrollToNewCard)('/rent', '.card--rent'), (0,_js_newCard__WEBPACK_IMPORTED_MODULE_11__.scrollToNewCard)('/time', '.card--time'), (0,_js_newCard__WEBPACK_IMPORTED_MODULE_11__.scrollToNewCard)('/airport', '.card--airport');
 });
 
 /***/ }),

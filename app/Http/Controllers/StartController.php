@@ -72,7 +72,7 @@ class StartController extends Controller
             $phrase->user_id = Auth::user()->id;
             $phrase->save();
 
-            return redirect()->route('start');  
+            return redirect()->route('road');  
        } 
     }
 
