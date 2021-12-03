@@ -258,23 +258,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var scrollToNewCard = function scrollToNewCard(pathname, card) {
   if (location.pathname == pathname) {
-    var last = $(card).last(); // last.addClass("last")
-
+    var last = $(card).last();
+    var allCard = $(card).length;
     var p = last.find("p.card__heading").first();
-    p.before("<p class=\"new\">NEW</p>"); // $('.last').removeClass("hidden");
-
+    var collapse = last.closest('section').find('.collapse');
+    p.before("<p class=\"new\">NEW</p>");
     var card__heading = $('.new');
     setTimeout(function () {
       card__heading.slideUp();
     }, 4000);
-    var offset = last.offset(); // const expand = last.closest('section').find('.expand').addClass('hidden');
-    // const collapse = last.closest('section').find('.collapse').addClass('block');
 
+    if (allCard > 9) {
+      var cardHidden = last.closest('section').find('.hidden').removeClass('hidden').addClass('slice');
+      var expand = last.closest('section').find('.expand').addClass('hidden');
+      var expandParagraph = last.closest('section').find('.expand > .expand__paragraph ');
+      collapse.addClass('block');
+    }
+
+    var offset = last.offset();
     $('html, body').animate({
       scrollTop: offset.top,
       scrollLeft: offset.left,
       behavior: "smooth"
-    }); // console.log(expand)
+    });
+    collapse.click(function () {
+      var slice = last.closest('section').find('.slice').removeClass('slice').addClass('hidden');
+    });
   }
 
   ;

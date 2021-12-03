@@ -9,7 +9,13 @@
 </p>
 <p>5. W pliku .env zmień nazwę bazy danych na aloha_summer(<b>DB_DATABASE=aloha_summer</b>)</p>
 <p>6. Stwórz klucz aplikacji(<b>php artisan key:generate</b>)</p>
-<p>7. Odpal server laravela(<b>php artisan serve</b>)</p>
+<p>7. Zainstaluj XAMPP
+    (<a href="https://www.apachefriends.org/pl/download.html">https://www.          apachefriends.org/pl/download.html
+    </a>)
+</p>
+<p>8. Wpisz w przeglądarce adres <b>http://localhost/phpmyadmin/</b> i stwórz nową bazę danych o nazwie <b>aloha_summer</b></p>
+<p>9. Otwórz w terminalu katalog z projektem i wpisz w konsoli(<b>php artisan migrate</b>)</p>
+<p>10. Odpal server laravela(<b>php artisan serve</b>)</p>
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>

@@ -132,6 +132,13 @@ html {
     opacity: 0.4;
 }
 
+.empty {
+    font-size: 2rem;
+    color: crimson;
+    display: flex;
+    justify-content: center;
+}
+
 @media all and (max-width: map-get($brakepoints, lg)){
     .travel__wrapper {
        grid-template-columns: 1fr;

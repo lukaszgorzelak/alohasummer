@@ -56,7 +56,7 @@
                         </li>
                         @endif
                         <li class="nav__item dropdown">
-                            <a class="nav__link " href="#" role="button">
+                            <a class="nav__link " href="" onclick="event.preventDefault();" role="button">
                                 {{ Auth::user()->name }}
                             </a>
                             <i class="fas fa-angle-down" aria-hidden="true"></i>
@@ -66,14 +66,14 @@
                                 <a class="nav__link" href="{{ route('profile', ['id' => Auth::user()->id ]) }}">Profil</a>
                             </li>
                             <li class="nav__item nav__item--">
-                            <a class="nav__link" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
-                                Wyloguj
-                            </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
-                            </form>
+                                <a class="nav__link" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                    Wyloguj
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
                             </li>
                         </ul>
                     @endguest
@@ -100,7 +100,7 @@
                             @endif
                         @else
                             <li class="nav__item">
-                                <a class="nav__link" href="#" role="button" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a class="nav__link" href="" onclick="event.preventDefault();" role="button" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
                             </li>
@@ -122,9 +122,11 @@
                             <li class="nav__item">
                                 <a href="#airport" class="nav__link">Airport</a>
                             </li>
+                            @if (!Route::is('profile'))
                             <li class="nav__item">
                                 <a href="#quiz" class="nav__link">Quiz</a>
                             </li>
+                            @endif
                             <li class="nav__item">
                                 <a class="nav__link" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
