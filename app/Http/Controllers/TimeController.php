@@ -85,6 +85,6 @@ class TimeController extends Controller
     {
         TimePhrase::destroy($id);
 
-        return redirect()->route('time');
+        return redirect()->route('start');
     }
 }

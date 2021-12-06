@@ -84,6 +84,6 @@ class RentController extends Controller
     {
         RentPhrase::destroy($id);
 
-        return redirect()->route('rent');
+        return redirect()->route('start');
     }
 }

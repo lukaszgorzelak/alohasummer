@@ -84,6 +84,6 @@ class TicketController extends Controller
     {
         TicketPhrase::destroy($id);
 
-        return redirect()->route('ticket');
+        return redirect()->route('start');
     }
 }

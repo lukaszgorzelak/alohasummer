@@ -89,7 +89,7 @@ class StartController extends Controller
        $phrase->translation = $request->translation;
 
        $phrase->save();
-       return redirect()->route('start');
+       return redirect()->route('road');
     }
 
     public function delete($id) //Usuwanie rekordu z bazy

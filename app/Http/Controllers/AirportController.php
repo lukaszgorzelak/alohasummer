@@ -84,6 +84,6 @@ class AirportController extends Controller
     {
         AirportPhrase::destroy($id);
 
-        return redirect()->route('airport');
+        return redirect()->route('start');
     }
 }
